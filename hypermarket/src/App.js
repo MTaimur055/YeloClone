@@ -21,18 +21,21 @@ import CustomerListView from './Components/Restaurants/index1';
 import { Grid } from '@material-ui/core';
 
 import StickyFooter from './Components/footer';
+import Homeextention from './Components/maincharts';
 
 function App() {
   return (
     
     <Router>
       <div>
+      <div style={{ paddingLeft: "177px" }}>
       <ToastContainer />
       
       
       
       <TopMenue />
-    
+      
+      <Home/>
 
      
       <Switch>
@@ -41,7 +44,7 @@ function App() {
      <Route path="/login" exact component={Login} />
      <Route path="/reset"exact component={ResetPassword} />
      <Route  path="/reset/:token" exact component={Newpassword} />
-     <Route path="/"exact component={Home} />
+     <Route path="/"exact component={Homeextention} />
     <Route path="/Home1" component={index} />
     <Route path="/Analytics" component={Analytics} />
        <Route path="/customers" component={Customers}        />
@@ -57,6 +60,7 @@ function App() {
 
       </Switch>
       <StickyFooter />
+      </div>
       </div>
     </Router>
     

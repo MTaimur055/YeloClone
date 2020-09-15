@@ -22,9 +22,6 @@ const useStyles = makeStyles((theme) => ({
        color:"white",
        paddingRight:"1rem"
     },
-    add_space:{
-      
-    },
     title: {
       flexGrow: 1,
     },
@@ -39,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
   }))(Badge);
 const TopMenue = () => {
     const classes=useStyles();
-    const[count,setcount]=React.useState([])
     const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   function counts(items) {
@@ -61,13 +57,11 @@ const TopMenue = () => {
     return ( 
     
       
-        <AppBar position="static" style={{background:"grey"}}>
+        <AppBar position="static" style={{background:"grey",width:"100%"}}>
       
          <Toolbar>
-         <Typography>
-          <Link to="/" className={classes.linke} > Home</Link>
-        </Typography>   
-        
+           
+    
          <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
           <img src='https://admin.yelo.red/en/assets/images/yelo-logo.png' alt='logo'></img>
          
