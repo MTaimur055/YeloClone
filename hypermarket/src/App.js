@@ -27,6 +27,9 @@ import { Grid } from "@material-ui/core";
 import StickyFooter from "./Components/footer";
 import Homeextention from "./Components/maincharts";
 import Products from "./Components/Products";
+import PromoCodes from "./Components/PromoCodes";
+import Discounts from "./Components/Discounts";
+import Refferals from "./Components/Referrals";
 
 function App() {
   return (
@@ -51,6 +54,9 @@ function App() {
             <Route path="/contact-us" component={Contact} />
             <Route path="/products" component={Products} />
             <Route path="/index1" component={CustomerListView} />
+            <Route path="/promos" component={PromoCodes} />
+            <Route path="/discounts" component={Discounts} />
+            <Route path="/refferals" component={Refferals} />
             <Route path="/" exact component={Homeextention} />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
