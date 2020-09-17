@@ -35,7 +35,7 @@ function App() {
   return (
     <Router>
       <div>
-        <div style={{ paddingLeft: "177px" }}>
+        <div style={{ paddingLeft: "195px" }}>
           <ToastContainer />
           <TopMenue />
 
