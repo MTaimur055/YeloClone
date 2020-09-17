@@ -204,7 +204,11 @@ const Home = () => {
           </ListItem>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
+
               <Link to="/index2">
+
+            
+
                 <ListItem button className={classes.nested}>
                   <ListItemIcon>
                     <StarBorder />
@@ -213,7 +217,11 @@ const Home = () => {
                 </ListItem>
               </Link>
 
+
               <Link to="/index3">
+
+         
+
                 <ListItem button className={classes.nested}>
                   <ListItemIcon>
                     <StarBorder />
@@ -231,11 +239,17 @@ const Home = () => {
                 </ListItem>
               </Link>
             </List>
-          </Collapse>
+         
+       
+        </Collapse>
         </List>
-      </Drawer>
+     </Drawer>
     </div>
   );
 };
 
+
 export default Home;
+
+
+

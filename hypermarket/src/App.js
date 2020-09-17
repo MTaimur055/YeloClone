@@ -23,13 +23,19 @@ import ResetPassword from "./Components/users/reset";
 import Newpassword from "./Components/users/newpassord";
 import index from "./Components/DashboardView/index";
 import CustomerListView from "./Components/Restaurants/index1";
+
 import  CustomerListView1 from "./Components/Discount/index3";
+
 import { Grid } from "@material-ui/core";
 import StickyFooter from "./Components/footer";
 import Homeextention from "./Components/maincharts";
 import Products from "./Components/Products";
+
 import promo from "./Components/Promocodes/index2";
 
+
+import PromoCodes from "./Components/PromoCodes";
+import Discounts from "./Components/Discounts";
 import Refferals from "./Components/Referrals";
 
 function App() {
@@ -39,6 +45,11 @@ function App() {
         <div style={{ paddingLeft: "195px" }}>
           <ToastContainer />
           <TopMenue />
+
+
+          <Home />
+
+
 
           <Home />
 
@@ -55,8 +66,13 @@ function App() {
             <Route path="/contact-us" component={Contact} />
             <Route path="/products" component={Products} />
             <Route path="/index1" component={CustomerListView} />
+
             <Route path="/index2" component={promo} />
             <Route path="/index3" component={CustomerListView1} />
+
+            <Route path="/promos" component={PromoCodes} />
+            <Route path="/discounts" component={Discounts} />
+
             <Route path="/refferals" component={Refferals} />
             <Route path="/" exact component={Homeextention} />
             <Route path="/not-found" component={NotFound} />

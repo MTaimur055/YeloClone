@@ -220,6 +220,9 @@ export default function Products() {
           <FormControl variant="outlined" className={classes.formControl}>
             <InputLabel id="demo-simple-select-outlined-label">
               HyperMarket
+
+              TimmyShop
+
             </InputLabel>
             <Select
               labelId="demo-simple-select-outlined-label"
