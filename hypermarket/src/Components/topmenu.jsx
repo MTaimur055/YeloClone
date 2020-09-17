@@ -47,91 +47,6 @@ const TopMenue = () => {
     setAnchorEl(null);
   };
 
-<<<<<<< HEAD
-    return ( 
-    
-      
-        <AppBar position="relative" style={{background:"grey",width:"100%"}}>
-      
-         <Toolbar>
-           
-    
-         <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
-          <img src='https://admin.yelo.red/en/assets/images/yelo-logo.png' alt='logo'></img>
-         
-          </Typography>
-          <Site/>
-          <IconButton color="inherit">
-            
-              < ContactSupportIcon />
-          
-          </IconButton>
-          <IconButton color="inherit">
-          
-              <ControlCameraIcon />
-          
-          </IconButton>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-       
-        
-    <Typography>
-      
-          <Link to="/login" className={classes.linke}>Login</Link>
-        </Typography> 
-        <Typography>
-          <Link to="/register" className={classes.linke}>Register</Link>
-        </Typography> 
-         
-        
-          <div>
-            <IconButton
-              aria-label="U"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleMenu}
-              color="inherit"
-            >
-              
-             
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={open}
-              onClose={handleClose}
-            >
-              
-              <Divider />
-              
-              <Button color="primary" onClick={handleClose}>Profile</Button> 
-              <Button color="primary" 
-         >Logout</Button>
-            </Menu>
-          </div>
-        
-
-
-
-
-        
-
-
-
-  
-=======
   return (
     <AppBar position="static" style={{ background: "grey", width: "100%" }}>
       <Toolbar>
@@ -159,7 +74,6 @@ const TopMenue = () => {
             <NotificationsIcon />
           </Badge>
         </IconButton>
->>>>>>> 5508a7309c7c6b6856764e117878f1ea18d4018e
 
         <Typography>
           <Link to="/login" className={classes.linke}>

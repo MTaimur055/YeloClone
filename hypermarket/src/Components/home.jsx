@@ -47,16 +47,9 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
   linke: {
-<<<<<<< HEAD
-    color:"white",
-    paddingRight:"1rem"
- },
- 
-=======
     color: "white",
     paddingRight: "1rem",
   },
->>>>>>> 5508a7309c7c6b6856764e117878f1ea18d4018e
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
   },
@@ -211,7 +204,7 @@ const Home = () => {
           </ListItem>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <Link to="/promos">
+              <Link to="/index2">
                 <ListItem button className={classes.nested}>
                   <ListItemIcon>
                     <StarBorder />
@@ -220,7 +213,7 @@ const Home = () => {
                 </ListItem>
               </Link>
 
-              <Link to="/discounts">
+              <Link to="/index3">
                 <ListItem button className={classes.nested}>
                   <ListItemIcon>
                     <StarBorder />

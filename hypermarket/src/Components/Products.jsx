@@ -219,7 +219,7 @@ export default function Products() {
           </Typography>
           <FormControl variant="outlined" className={classes.formControl}>
             <InputLabel id="demo-simple-select-outlined-label">
-              TimmyShop
+              HyperMarket
             </InputLabel>
             <Select
               labelId="demo-simple-select-outlined-label"
