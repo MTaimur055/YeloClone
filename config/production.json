@@ -1,4 +1,4 @@
 {
-  "db": "mongodb://localhost/Products",
+  "db": "mongodb://localhost/YeloClone",
   "jwtPrivateKey": "SomePrivateKey"
 }
