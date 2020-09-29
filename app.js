@@ -5,6 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var indexRouter = require("./routes/index");
 var categoryRouter = require("./routes/api/categories");
+var productRouter = require("./routes/api/products");
 var config = require("config");
 var cors = require("cors");
 var cookieParser = require("cookie-parser");
@@ -19,6 +20,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 app.use("/", indexRouter);
 app.use("/api/categories", categoryRouter);
+app.use("/api/products", productRouter);
 
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, "hypermarket/build")));
