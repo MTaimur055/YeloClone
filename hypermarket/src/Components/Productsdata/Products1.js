@@ -102,6 +102,7 @@ class Products1 extends Component {
     const productItems = products.map((product) => (
       
       
+      
       <div className="col-md-4" key={product.id}>
         <div className="thumbnail text-center">
           <p>
