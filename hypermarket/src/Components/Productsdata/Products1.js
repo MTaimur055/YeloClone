@@ -1,39 +1,130 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import util from "./util";
-import { addToCart } from "./cartActions";
-import { fetchProducts } from "./productActions";
+
+
+
 class Products1 extends Component {
-  componentDidMount() {
-    this.props.fetchProducts();
-  }
+  
   render() {
-    const productItems = this.props.products.map((product) => (
+    var  products= [
+      {
+        "id": 1,
+        "sku": 18644119330491312,
+        "title": "Sphynx Tie Dye Grey T-Shirt",
+        "description": "Sphynx Tie Dye Grey",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 10,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 2,
+        "sku": 11854078013954528,
+        "title": "Danger Knife Grey T-Shirt",
+        "description": "Danger Knife Grey",
+        "availableSizes": ["X", "M", "L"],
+        "price": 14.9,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 3,
+        "sku": 876661122392077,
+        "title": "White DGK Script Tee",
+        "description": "White DGK Script",
+        "availableSizes": ["X", "M", "L"],
+        "price": 14.9,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 4,
+        "sku": 9197907543445677,
+        "title": "Born On The Streets  T-Shirt",
+        "description": "Born On The Streets",
+        "availableSizes": ["XL"],
+        "price": 25.9,
+        "isFreeShipping": false
+      },
+  
+      {
+        "id": 5,
+        "sku": 10547961582846888,
+        "title": "Tso 3D Short Sleeve T-Shirt A",
+        "description": "Tso 3D Short Sleeve",
+        "availableSizes": ["X", "L", "XL"],
+        "price": 10.9,
+        "isFreeShipping": false
+      },
+  
+      {
+        "id": 6,
+        "sku": 6090484789343891,
+        "title": "Man Tie Dye Cinza Grey T-Shirt",
+        "description": "Man Tie Dye Cinza Grey",
+        "availableSizes": ["XL", "XXL"],
+        "price": 49.9,
+        "isFreeShipping": false
+      },
+  
+      {
+        "id": 7,
+        "sku": 18532669286405342,
+        "title": "Crazy Monkey Black T-Shirt",
+        "description": "1977 Infantil",
+        "availableSizes": ["S"],
+        "style": "Preto com listras brancas",
+        "price": 22.5,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 8,
+        "sku": 5619496040738316,
+        "title": "Tso 3D Black T-Shirt",
+        "description": "",
+        "availableSizes": ["XL"],
+        "style": "Azul escuro",
+        "price": 18.7,
+        "isFreeShipping": false
+      },
+      {
+        "id": 9,
+        "sku": 11600983276356165,
+        "title": "Crazy Monkey Grey",
+        "description": "",
+        "availableSizes": ["L", "XL"],
+        "price": 134.9,
+        "isFreeShipping": true
+      }
+    ]
+
+  
+    const productItems = products.map((product) => (
+      
+      
       <div className="col-md-4" key={product.id}>
         <div className="thumbnail text-center">
-          <a
-            href={`#${product.id}`}
-          
-          >
-            <img src={`products/${product.sku}_2.jpg`} alt={product.title} />
+          <p>
+            {product.id}
+          </p>
+            <img src={'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'} alt={product.title} />
             <p>{product.title}</p>
-          </a>
-          <b>{util.formatCurrency(product.price)}</b>
+          
+          <b>{product.price}</b>
+          <br/>
           <button
             className="btn btn-primary"
-            onClick={(e) => this.props.addToCart(this.props.cartItems, product)}
+           
           >
             Add to cart
           </button>
         </div>
       </div>
+      
     ));
 
     return <div className="row">{productItems}</div>;
   }
 }
-const mapStateToProps = (state) => ({
-  products: state.products.filteredItems,
-  cartItems: state.cart.items,
-});
-export default connect(mapStateToProps, { fetchProducts, addToCart })(Products1);
+
+export default Products1;

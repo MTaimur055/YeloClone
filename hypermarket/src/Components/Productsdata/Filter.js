@@ -1,23 +1,109 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { filterProducts, sortProducts } from "./productActions";
+
 class Filter extends Component {
   render() {
+    var  products= [
+      {
+        "id": 1,
+        "sku": 18644119330491312,
+        "title": "Sphynx Tie Dye Grey T-Shirt",
+        "description": "Sphynx Tie Dye Grey",
+        "availableSizes": ["X", "L", "XL", "XXL"],
+        "price": 10,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 2,
+        "sku": 11854078013954528,
+        "title": "Danger Knife Grey T-Shirt",
+        "description": "Danger Knife Grey",
+        "availableSizes": ["X", "M", "L"],
+        "price": 14.9,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 3,
+        "sku": 876661122392077,
+        "title": "White DGK Script Tee",
+        "description": "White DGK Script",
+        "availableSizes": ["X", "M", "L"],
+        "price": 14.9,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 4,
+        "sku": 9197907543445677,
+        "title": "Born On The Streets  T-Shirt",
+        "description": "Born On The Streets",
+        "availableSizes": ["XL"],
+        "price": 25.9,
+        "isFreeShipping": false
+      },
+  
+      {
+        "id": 5,
+        "sku": 10547961582846888,
+        "title": "Tso 3D Short Sleeve T-Shirt A",
+        "description": "Tso 3D Short Sleeve",
+        "availableSizes": ["X", "L", "XL"],
+        "price": 10.9,
+        "isFreeShipping": false
+      },
+  
+      {
+        "id": 6,
+        "sku": 6090484789343891,
+        "title": "Man Tie Dye Cinza Grey T-Shirt",
+        "description": "Man Tie Dye Cinza Grey",
+        "availableSizes": ["XL", "XXL"],
+        "price": 49.9,
+        "isFreeShipping": false
+      },
+  
+      {
+        "id": 7,
+        "sku": 18532669286405342,
+        "title": "Crazy Monkey Black T-Shirt",
+        "description": "1977 Infantil",
+        "availableSizes": ["S"],
+        "style": "Preto com listras brancas",
+        "price": 22.5,
+        "isFreeShipping": true
+      },
+  
+      {
+        "id": 8,
+        "sku": 5619496040738316,
+        "title": "Tso 3D Black T-Shirt",
+        "description": "",
+        "availableSizes": ["XL"],
+        "style": "Azul escuro",
+        "price": 18.7,
+        "isFreeShipping": false
+      },
+      {
+        "id": 9,
+        "sku": 11600983276356165,
+        "title": "Crazy Monkey Grey",
+        "description": "",
+        "availableSizes": ["L", "XL"],
+        "price": 134.9,
+        "isFreeShipping": true
+      }
+    ]    
     return (
       <div className="row">
-        <div className="col-md-4">{`${this.props.filteredProducts.length} products found.`}</div>
+        <div className="col-md-4">{products.length}  products found</div>
         <div className="col-md-4">
           <label>
             Order by
             <select
               className="form-control"
               value={this.props.sort}
-              onChange={(event) => {
-                this.props.sortProducts(
-                  this.props.filteredProducts,
-                  event.target.value
-                );
-              }}
+             
             >
               <option value="">Select</option>
               <option value="lowestprice">Lowest to highest</option>
@@ -32,12 +118,7 @@ class Filter extends Component {
             <select
               className="form-control"
               value={this.props.size}
-              onChange={(event) => {
-                this.props.filterProducts(
-                  this.props.products,
-                  event.target.value
-                );
-              }}
+             
             >
               <option value="">ALL</option>
               <option value="x">Fruits</option>
@@ -53,12 +134,5 @@ class Filter extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
-  products: state.products.items,
-  filteredProducts: state.products.filteredItems,
-  size: state.products.size,
-  sort: state.products.sort,
-});
-export default connect(mapStateToProps, { filterProducts, sortProducts })(
-  Filter
-);
+
+export default Filter
