@@ -20,7 +20,7 @@ function createData(name,Edit,Delete) {
   return { name,Edit,Delete};
 }
 const handledialog = () => {
- return <Link to='./form.jsx'></Link>
+ return {}
 };
 
 const rows = [
